@@ -1,0 +1,18 @@
+# Кому интересно скрипт на стики с актуальной VOKA
+#Для работы нужно скачать Termux скачиваем здесь https://f-droid.org/F-Droid.apk
+#В Termux вводим по одной строчке
+pkg update -y && apt update -y && apt install -y git    #Будут вопросы нажимаем просто Enter
+git clone https://github.com/rendiix/termux-adb-fastboot.git
+cd termux-adb-fastboot
+bash install.sh -y                                      #Будет вопрос нажимаем просто Enter
+cd ..
+git clone https://github.com/iwannatryarestudy/A1_govno.git
+unzip -o A1_govno/stick.zip
+sh update_script.sh
+#ЭТО ВСЕ настраиваеться один раз на вашем телефоне
+
+#Каждый раз на стике у клиента для настройки нужно сделать следующее
+1. На приставке заходим в настройках в раздел "Об устройстве" и кликаем на строке с номером сборки (последняя строка) до тех пор, пока не появится сообщение, что вы стали "разработчиком".
+2. Заходим в появившейся в настройках раздел "Для разработчиков" и активируем пункт "Отладка по USB".
+3. Вписываем IP-адрес приставки (найти его можно в подключении к сети Wi-Fi) и нажимаем Enter.
+#Все  для запуска скрипта пишем sh 1stick.sh(если это 1080p_stick ) или sh 4K_stick.sh(если стик 4K) для Sony sh Sony.sh
