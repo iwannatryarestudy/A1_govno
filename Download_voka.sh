@@ -1,5 +1,4 @@
 #!/data/data/com.termux/files/usr/bin/sh
-set -euo pipefail
 
 URL="https://voka.tv/apps/TvVoka-api21-prod-leanback-app-default-release-v22234.apk"
 FILENAME="${URL##*/}"
