@@ -3,8 +3,8 @@ read -p "Введите 2 последних октета " var1;
 adb connect 192.168.$var1:5555 & sleep 5;
 adb shell settings put global animator_duration_scale 0.0 && adb shell settings put global window_animation_scale 0.0 && adb shell settings put global transition_animation_scale 0.0 && echo "animation off";
 voka2="com.spbtv.velcom";
-VOka="TvVoka-api21-prod-leanback-app-default-release-v22064.apk"
-versn2=22064
+VOka="TvVoka-api21-prod-leanback-app-default-release-v22234.apk"
+versn2=22234
 versn1=$(adb shell dumpsys package com.spbtv.velcom | grep versionCode | awk -F "=" '{print $2}' | awk '{print $1}')
 
 if [ -z "$versn1" ] || [ "$versn1" -lt "$versn2" ]; then

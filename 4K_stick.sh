@@ -4,7 +4,7 @@ adb connect 192.168.$var1:5555 & sleep 5;
 adb shell settings put global animator_duration_scale 0.0 && adb shell settings put global window_animation_scale 0.0 && adb shell settings put global transition_animation_scale 0.0 && echo "animation off";
 voka2="com.spbtv.velcom";
 voka1="$(adb shell dumpsys package com.spbtv.velcom |grep "Unable to find package"|awk 'NR == 1{print$5}')";
-VOka="Voka-prod-androidTv-app-default-release-21984.apk"
+VOka="TvVoka-api21-prod-leanback-app-default-release-v22234.apk"
 #echo $voka1;
 if [ "$voka1" = "$voka2" ]
 then
@@ -14,7 +14,7 @@ echo "VOKA installed"
 #echo $voka2
 fi
 #adb shell cmd appops set com.spbtv.velcom RUN_IN_BACKGROUND ignore;
-versn2=21984
+versn2=22234
 versn1="$(adb shell dumpsys package com.spbtv.velcom | grep versionCode |awk -F "=" '{print $2}'|awk  '{print $1}')";
 #echo    $versn1;
 if [ "$versn1" -lt "$versn2" ]
