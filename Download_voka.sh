@@ -15,7 +15,7 @@ echo "Версия: $VERSION"
 sed -i \
   -e "s|^VOka=.*|VOka=\"${FILENAME}\"|" \
   -e "s|^versn2=.*|versn2=${VERSION}|" \
-  1stick.sh 4K_stick.sh
+  1stick.sh 4K_stick.sh stable_voka_and_install.sh
 
 find . -maxdepth 1 -mindepth 1 -type f -name "*apk.*" ! -name "TvVoka-21805.apk" ! -name "TvVoka-api21-prod-leanback-app-default-release-v22064.apk" -exec rm -f {} \;
 
